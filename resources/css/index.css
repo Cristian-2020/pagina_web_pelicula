@@ -1,0 +1,13 @@
+
+#icon-netflix {
+    cursor: pointer;
+}
+
+.tbl-img {
+    transition: transform 0.3s ease;
+}
+
+.tbl-img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}

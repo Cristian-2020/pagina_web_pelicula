@@ -1,0 +1,131 @@
+
+
+<!-- Modal -->
+<div class="modal fade" id="mdl_registro_pelicula" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdl_title_registro">
+                    <i class="fas fa-clapperboard"></i> Registrar nueva película
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frm_registro_pelicula" name="frm_registro_pelicula" onsubmit="return false" autocomplete="off">
+                    <input type="hidden" id="id_pelicula" name="id_pelicula">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <img src="../../../media/img/img-defecto.png" class="rounded img-fluid mb-3" alt="imagen_pelicula" style="width:auto; height: 275px;">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fas fa-car"></i>
+                                    </span>
+                                </div>
+                                <input type="file" class="custom-file-input" id="imagen" name="imagen" aria-describedby="imagen">
+                                <label class="custom-file-label" for="imagen">Elige un archivo</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label>Título:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fas fa-film"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Título" name="titulo" id="titulo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Año:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fas fa-calendar-days"></i>
+                                            </span>
+                                        </div>
+                                        <input type="number" class="form-control" oninput="this.value = this.valueAsNumber" placeholder="Año" name="anio" id="anio">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Género:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fas fa-file-video"></i>
+                                            </span>
+                                        </div>
+                                        <select class="form-control" name="genero" id="genero">
+                                            <option value="" selected disabled>Seleccione un tipo</option>
+                                            <option value="1">Acción</option>
+                                            <option value="2">Aventura</option>
+                                            <option value="3">Comedia</option>
+                                            <option value="4">Drama</option>
+                                            <option value="5">Terror</option>
+                                            <option value="6">Ciencia ficción</option>
+                                            <option value="7">Suspenso</option>
+                                            <option value="8">Documental</option>
+                                            <option value="9">Animación</option>
+                                            <option value="10">Musical</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Duración:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fas fa-clock"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Duración" name="duracion" id="duracion">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Descripción:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fas fa-align-justify"></i>
+                                    </span>
+                                </div>
+                                <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" style="min-height: 44px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+                <button type="submit" class="btn btn-success" form="frm_registro_pelicula" id="btn_guardar_pelicula">
+                    <i class="fas fa-save"></i> Guardar
+                </button>
+                <button type="button" class="btn btn-primary" id="btn_limpiar_formulario">
+                    <i class="fas fa-broom"></i> Limpiar
+                </button>
+            </div>
+            </div>
+    </div>
+</div>
+
+<script src="app/controllers/helper.js"></script>
+<script src="app/controllers/forms/modal.js"></script>
